@@ -344,3 +344,9 @@ variable "task_container_ulimits" {
   description = "(Optional) Container ulimit settings. This is a list of maps, where each map should contain \"name\", \"hardLimit\" and \"softLimit\""
   default     = null
 }
+
+variable "task_docker_labels" {
+  description = "Docker labels to pass to the container."
+  default     = {}
+  type        = map(string)
+}
